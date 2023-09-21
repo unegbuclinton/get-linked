@@ -25,3 +25,11 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+
+.plus {
+  transform: scaleX(1) rotate(0deg);
+}
+
+.minus {
+  transform: scaleX(0) rotate(0deg);
+}

@@ -18,6 +18,12 @@ module.exports = {
         secondary: '#903AFF;',
         tertiary: '#D434FE;',
       },
+      fontSize: {
+        '4xl': '32px',
+      },
+      maxWidth: {
+        'primary-width': '535px',
+      },
       backgroundImage: {
         'custom-gradient':
           'linear-gradient(270deg, #903AFF 0%, #D434FE 56.42%, #FF26B9 99.99%, #FE34B9 100%)',
