@@ -3,33 +3,53 @@ import React from 'react'
 
 const HeroSection = () => {
   return (
-    <div className='pl-[128px] flex text-white'>
+    <div className='text-center lg:text-left lg:pl-[128px] flex flex-col items-center lg:flex-row text-white px-9 lg:px-0'>
+      <p className='block lg:hidden pt-8 relative whitespace-nowrap text-base w-fit font-bold mb-10'>
+        Igniting a Revolution in HR Innovation
+        <span className='absolute right-0 -bottom-3'>
+          <img src='/dash-mobile.svg' alt='dash' />
+        </span>
+      </p>
+
       <div className='flex flex-col items-start justify-center'>
         <div className='flex flex-col justify-center'>
-          <h2 className=' relative text-[80px] whitespace-nowrap font-bold'>
+          <h2 className=' relative text-4xl lg:text-[80px] whitespace-nowrap font-bold'>
             getlinked Tech
             <span>
               <img
                 src='/bulb.svg'
                 alt='bulb'
-                className='absolute -top-9 right-[97px]'
+                className='hidden lg:block absolute -top-9 right-[97px]'
+              />
+              <img
+                src='/bulb-mobile.svg'
+                alt='bulb'
+                className='block lg:hidden absolute -top-4 right-[27px]'
               />
             </span>
           </h2>
-          <h2 className='relative text-[80px] whitespace-nowrap  font-bold'>
+          <h2 className='flex items-center justify-items-center relative text-4xl lg:text-[80px] whitespace-nowrap font-bold'>
             Hackathon <span className='text-tertiary '>1.0 </span>
-            <span className='absolute flex -right-[80px] top-3'>
+            <span>
+              <img src={'/link-mobile.svg'} alt='link' />
+            </span>
+            <span>
+              <img src={'/bomb-mobile.svg'} alt='link' />
+            </span>
+            <span className='hidden absolute lg:flex -right-[80px] top-3'>
               <img src={'/link.svg'} alt='link' />
               <img src={'/bomb.svg'} alt='bomb' />
             </span>
           </h2>
-          <p className='text-xl mt-2 mb-10'>
+          <p className='text-[13px] lg:text-xl mt-2 mb-10'>
             Participate in getlinked tech Hackathon 2023 stand a chance to win a
             Big prize
           </p>
         </div>
-        <Button type='button'>Register</Button>
-        <div className='flex mt-[77px]'>
+        <div className='w--full flex justify-center lg:justify-start'>
+          <Button type='button'>Register</Button>
+        </div>
+        <div className='w-full flex justify-center lg:justify-start mt-[77px]'>
           <p>
             00 <sub>H</sub>
           </p>
@@ -41,8 +61,8 @@ const HeroSection = () => {
           </p>
         </div>
       </div>
-      <div className='pt-8'>
-        <p className='relative whitespace-nowrap text-[36px] w-fit font-bold mb-10'>
+      <div className=''>
+        <p className='relative hidden lg:block pt-8 whitespace-nowrap text-[36px] w-fit font-bold mb-10'>
           Igniting a Revolution in HR Innovation
           <span className='absolute right-0 -bottom-2'>
             <img src='/dash.svg' alt='dash' />

@@ -5,4 +5,5 @@ export interface buttonProp {
   onClick?: () => void
   type: 'submit' | 'button'
   disabled?: boolean
+  small?: boolean
 }
