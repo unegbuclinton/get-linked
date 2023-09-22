@@ -33,3 +33,23 @@ body {
 .minus {
   transform: scaleX(0) rotate(0deg);
 }
+
+.link-underline {
+  position: relative;
+  text-decoration: none;
+}
+
+.link-underline::before {
+  content: '';
+  position: absolute;
+  bottom: -2px; /* Adjust this value to control the distance of the line from the text */
+  left: 0;
+  width: 0;
+  height: 3px; /* Adjust this value to control the thickness of the line */
+  background-color: #d434fe; /* Adjust this color to your preference */
+  transition: width 0.3s ease; /* Adjust the animation speed as needed */
+}
+
+.link-underline:hover::before {
+  width: 100%;
+}

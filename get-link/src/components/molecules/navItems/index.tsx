@@ -13,7 +13,7 @@ const NavItems = () => {
     <div>
       <div className='flex items-center text-white gap-14'>
         {items?.map(({ text, link }, idx) => (
-          <Link className='text-base' key={idx} href={link}>
+          <Link className='text-base link-underline' key={idx} href={link}>
             {text}
           </Link>
         ))}

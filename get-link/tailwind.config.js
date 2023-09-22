@@ -17,6 +17,7 @@ module.exports = {
         primary: '#150E28',
         secondary: '#903AFF;',
         tertiary: '#D434FE;',
+        'light-tertiary': 'rgba(217, 217, 217, 0.03)',
       },
       fontSize: {
         '4xl': '32px',
