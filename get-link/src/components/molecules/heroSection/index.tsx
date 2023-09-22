@@ -3,7 +3,7 @@ import React from 'react'
 
 const HeroSection = () => {
   return (
-    <div className='text-center lg:text-left lg:pl-[128px] flex flex-col items-center lg:flex-row text-white px-9 lg:px-0'>
+    <div className='text-center lg:text-left lg:pl-[128px] flex flex-col items-center lg:flex-row text-white'>
       <p className='block lg:hidden pt-8 relative whitespace-nowrap text-base w-fit font-bold mb-10'>
         Igniting a Revolution in HR Innovation
         <span className='absolute right-0 -bottom-3'>
@@ -11,7 +11,7 @@ const HeroSection = () => {
         </span>
       </p>
 
-      <div className='flex flex-col items-start justify-center'>
+      <div className='flex flex-col items-start justify-center px-9 lg:px-0'>
         <div className='flex flex-col justify-center'>
           <h2 className=' relative text-4xl lg:text-[80px] whitespace-nowrap font-bold'>
             getlinked Tech
@@ -46,7 +46,7 @@ const HeroSection = () => {
             Big prize
           </p>
         </div>
-        <div className='w--full flex justify-center lg:justify-start'>
+        <div className='w-full flex justify-center lg:justify-start'>
           <Button type='button'>Register</Button>
         </div>
         <div className='w-full flex justify-center lg:justify-start mt-[77px]'>
