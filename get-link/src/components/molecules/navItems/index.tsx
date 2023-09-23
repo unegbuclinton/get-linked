@@ -10,7 +10,7 @@ const NavItems = () => {
   const toggleMenu = () => {
     setIsVisible(true)
   }
-  console.log(isVisible)
+
   return (
     <div>
       <div className='hidden lg:flex items-center text-white gap-14'>

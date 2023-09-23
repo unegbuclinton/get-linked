@@ -11,7 +11,7 @@ const MenuItems = ({ onClose }: { onClose: () => void }) => {
           <img src='/cancel.svg' alt='' />
         </div>
         {navMenuItems?.map(({ text, link }, idx) => (
-          <Link className='text-lg link-underline' key={idx} href={link}>
+          <Link className='text-lg' key={idx} href={link}>
             {text}
           </Link>
         ))}

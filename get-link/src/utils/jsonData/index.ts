@@ -60,5 +60,5 @@ export const navMenuItems: Array<{ text: string; link: string }> = [
   { text: 'Timeline', link: '' },
   { text: 'Overview', link: '' },
   { text: 'FAQs', link: '' },
-  { text: 'Contact', link: '' },
+  { text: 'Contact', link: '/contact' },
 ]

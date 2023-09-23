@@ -53,3 +53,17 @@ body {
 .link-underline:hover::before {
   width: 100%;
 }
+
+.gradient-border {
+  border-width: 2px; /* Adjust the border width as needed */
+  border-image: linear-gradient(270deg, #903aff, #d434fe, #ff26b9, #fe34b9);
+  border-image-slice: 1; /* Ensures the entire border is covered by the gradient */
+  border-image-source: linear-gradient(
+    270deg,
+    #903aff,
+    #d434fe,
+    #ff26b9,
+    #fe34b9
+  );
+  /* Add other button styling properties as needed */
+}

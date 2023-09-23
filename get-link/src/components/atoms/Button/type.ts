@@ -6,4 +6,5 @@ export interface buttonProp {
   type: 'submit' | 'button'
   disabled?: boolean
   small?: boolean
+  outline?: boolean
 }

@@ -5,6 +5,7 @@ import NavItems from '@/components/molecules/navItems'
 import { yupResolver } from '@hookform/resolvers/yup'
 import React from 'react'
 import { useForm } from 'react-hook-form'
+import { useRouter } from 'next/navigation'
 
 type Inputs = {
   name: string
@@ -21,10 +22,11 @@ const ContactPage = () => {
     mode: 'onChange',
     // resolver: yupResolver(contactSchema),
   })
+  const router = useRouter()
   return (
     <div className=' bg-primary p-12'>
       <div className='md:hidden'>
-        <img src={'/back.svg'} alt='' />
+        <img src={'/back.svg'} alt='' onClick={() => router.push('/')} />
       </div>
       <nav className='hidden md:flex bg-transparent items-center border-b border-white/20 justify-between px-14 pb-6 pt-9 lg:pt-[63px]'>
         <img
