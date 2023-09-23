@@ -13,11 +13,19 @@ import Sponsor from '@/components/molecules/sponsors'
 import Timeline from '@/components/molecules/timeline'
 import 'aos/dist/aos.css'
 import Aos from 'aos'
+import { useState } from 'react'
+import Preloader from '@/components/preloader'
 
 export default function Home() {
+  const [delay, setDelay] = useState(true)
   useEffect(() => {
     Aos.init({ duration: 1000 })
+    const timer = setTimeout(() => {
+      setDelay(false)
+    }, 5000)
+    return () => clearTimeout(timer)
   }, [])
+  if (delay) return <Preloader />
   return (
     <main className='bg-primary '>
       <Navbar />

@@ -33,10 +33,10 @@ const HeroSection = () => {
           </h2>
           <h2 className='flex items-center justify-items-center relative text-4xl lg:text-[80px] whitespace-nowrap font-bold'>
             Hackathon <span className='text-tertiary '>1.0 </span>
-            <span>
+            <span className='lg:hidden'>
               <img src={'/link-mobile.svg'} alt='link' />
             </span>
-            <span>
+            <span className='lg:hidden'>
               <img src={'/bomb-mobile.svg'} alt='link' />
             </span>
             <span className='hidden absolute lg:flex -right-[80px] top-3'>
@@ -49,20 +49,10 @@ const HeroSection = () => {
             Big prize
           </p>
         </div>
-        <div className='w-full flex justify-center lg:justify-start'>
+        <div className='w-full flex justify-center lg:justify-start mb-16'>
           <Button type='button'>Register</Button>
         </div>
-        <div className='w-full flex justify-center lg:justify-start mt-[77px]'>
-          <p>
-            00 <sub>H</sub>
-          </p>
-          <p>
-            00 <sub>M</sub>
-          </p>
-          <p>
-            00 <sub>S</sub>
-          </p>
-        </div>
+        <img src='/countdown.svg' alt='' />
       </div>
       <div data-aos='zoom-in'>
         <p className='relative hidden lg:block pt-8 whitespace-nowrap text-[36px] w-fit font-bold mb-10'>
