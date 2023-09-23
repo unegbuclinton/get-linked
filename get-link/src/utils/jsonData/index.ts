@@ -70,8 +70,8 @@ export const categoty: Array<{ value: string; label: string }> = [
   { value: 'PM', label: 'PM' },
 ]
 
-export const size: Array<{ value: string; label: string }> = [
-  { value: 'Large', label: 'Large' },
-  { value: 'Medium', label: 'Medium' },
-  { value: 'Small', label: 'Small' },
-]
+export const size: Array<{ value: string; label: string }> = []
+
+for (let i = 1; i <= 10; i++) {
+  size.push({ value: `${i}`, label: `${i}` })
+}

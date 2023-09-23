@@ -15,7 +15,7 @@ type Inputs = {
   name: string
   topic: string
   email: string
-  category: string
+  category?: string
   size: string
   phone: number
   termsAndConditions?: boolean
@@ -38,7 +38,7 @@ const RegisterPage = () => {
   })
 
   const [category, setCategory] = useState([])
-  const [modal, setModal] = useState(true)
+  const [modal, setModal] = useState(false)
 
   const onSubmit = async (data: Inputs) => {
     const { name, category, email, phone, size, topic, termsAndConditions } =

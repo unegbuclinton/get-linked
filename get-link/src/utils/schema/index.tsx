@@ -24,7 +24,7 @@ export const registerSchema = yup.object().shape({
     ),
   name: yup.string().required('Name is required'),
   topic: yup.string().required('Lets hear you'),
-  category: yup.string().required('choose a category'),
+  // category: yup.string().required('choose a category'),
   size: yup.string().required('choose a size'),
   phone: yup.number().required('Phone number is required'),
 })
