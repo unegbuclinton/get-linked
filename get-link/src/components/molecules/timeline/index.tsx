@@ -199,7 +199,7 @@ const Timeline = () => {
 
                         <div className='flex w-full justify-start md:justify-center relative mt-7'>
                             <div className='flex flex-col items-center relative'>
-                                <div className='w-[2px] md:w-[4px] h-[77px] md:h-[86px] bg-[#D434FE]'></div>
+                                <div className='w-[2px] md:w-[4px] h-[90px] md:h-[86px] bg-[#D434FE]'></div>
                                 <div className='w-[19.32px] md:w-[53px] h-[19.32px] md:h-[53px] rounded-full bg-circular-gradient mt-[4.6px] md:mt-[11px] flex items-center justify-center text-[12px] md:text-[24px] font-bold '>
                                     4
                                 </div>
