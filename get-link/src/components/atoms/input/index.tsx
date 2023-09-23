@@ -35,6 +35,9 @@ const InputField: React.FC<InputProps> = ({
 
   return (
     <div className={`${containerStyles} mt-5`}>
+      <label className='font-semibold text-sm text-gray-600 pb-1 block'>
+        {label}
+      </label>
       <div className='relative'>
         <input
           type={type === 'password' ? (visibility ? 'text' : 'password') : type}
@@ -48,17 +51,7 @@ const InputField: React.FC<InputProps> = ({
           placeholder={placeholder}
           className={`${styles} border border-white rounded-[4px] bg-light-tertiary outline-none focus:border-primary duration-200 px-6 py-2 mt-1 text-base w-full`}
         />
-        {/* {type === 'password' && (
-          <div
-            onClick={toggleVisibility}
-            className='absolute bottom-[12px] right-[10px] cursor-pointer'
-          >
-            {visibility ? <AiFillEye /> : <AiFillEyeInvisible />}
-          </div>
-        )}
-      </div>
-
-      <ErrorMessage field={error} /> */}
+        <p className='text-sm text-[red] mt-2'>{error}</p>
       </div>
     </div>
   )

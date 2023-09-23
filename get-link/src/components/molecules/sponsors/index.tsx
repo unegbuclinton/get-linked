@@ -2,7 +2,10 @@ import React from 'react'
 
 const Sponsor = () => {
   return (
-    <div className='border-b border-white/5 px-8 lg:px-0'>
+    <div
+      data-aos='flip-in-right'
+      className='border-b border-white/5 px-8 lg:px-0'
+    >
       <div className='text-center text-white mx-auto max-w-[1255px] py-10 '>
         <h2 className='text-xl lg:text-4xl font-bold'>Partners and Sponsors</h2>
         <p className='text-sm lg:text-xs max-w-[450px] mx-auto mt-5'>

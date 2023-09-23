@@ -62,3 +62,16 @@ export const navMenuItems: Array<{ text: string; link: string }> = [
   { text: 'FAQs', link: '' },
   { text: 'Contact', link: '/contact' },
 ]
+
+export const categoty: Array<{ value: string; label: string }> = [
+  { value: 'Frontend', label: 'Frontend' },
+  { value: 'Backend', label: 'Backend' },
+  { value: 'Design', label: 'Design' },
+  { value: 'PM', label: 'PM' },
+]
+
+export const size: Array<{ value: string; label: string }> = [
+  { value: 'Large', label: 'Large' },
+  { value: 'Medium', label: 'Medium' },
+  { value: 'Small', label: 'Small' },
+]

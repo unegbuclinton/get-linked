@@ -2,8 +2,14 @@ import React from 'react'
 
 const Rules = () => {
   return (
-    <div className='flex flex-col-reverse lg:flex-row justify-center items-center border border-white/20 px-11 lg:px-0 pb-12 lg:pb-0'>
-      <div className='max-w-primary-width text-center lg:text-left text-white'>
+    <div
+      data-aos='fade-right'
+      className='flex flex-col-reverse lg:flex-row justify-center items-center border border-white/20 px-11 lg:px-0 pb-12 lg:pb-0'
+    >
+      <div
+        data-aos='fade-down'
+        className='max-w-primary-width text-center lg:text-left text-white'
+      >
         <h3 className='font-bold text-xl lg:text-4xl mb-4 lg:mr-28'>
           Rules and <br /> <span className='text-tertiary'>Guidelines</span>
         </h3>

@@ -2,7 +2,10 @@ import React from 'react'
 
 const Prize = () => {
   return (
-    <div className='bg-[#110B27] py-16 mt-10 mb-12 text-white px-8'>
+    <div
+      data-aos='zoom-in'
+      className='bg-[#110B27] py-16 mt-10 mb-12 text-white px-8'
+    >
       <div className='flex items-center justify-center'>
         <div className='hidden lg:block w-[40%]'></div>
         <div>

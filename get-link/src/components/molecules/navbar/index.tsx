@@ -12,7 +12,7 @@ const Navbar = () => {
         className='hidden lg:block'
       />
       <img src={'/logo-mobile.svg'} alt='logo' className='block lg:hidden' />
-      <NavItems />
+      <NavItems outline={false} />
     </nav>
   )
 }

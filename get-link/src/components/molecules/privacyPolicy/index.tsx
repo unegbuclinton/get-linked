@@ -12,7 +12,10 @@ const PrivacyPolicy = () => {
   ]
   return (
     <div className='flex flex-col gap-12 lg:gap-0 lg:flex-row px-8 lg:px-12 items-center justify-center py-8 mt-16'>
-      <div className='lg:max-w-primary-width text-white pt-10 text-center lg:text-left'>
+      <div
+        data-aos='flip-right'
+        className='lg:max-w-primary-width text-white pt-10 text-center lg:text-left'
+      >
         <h3 className='font-bold text-xl lg:text-4xl lg:mb-4 lg:mr-28'>
           Privacy Policy and <br /> <span className='text-tertiary'>Terms</span>
         </h3>
@@ -58,7 +61,12 @@ const PrivacyPolicy = () => {
           </div>
         </div>
       </div>
-      <img src='/security.svg' alt='security' className='lg:ml-[50px]' />
+      <img
+        data-aos='flip-right'
+        src='/security.svg'
+        alt='security'
+        className='lg:ml-[50px]'
+      />
     </div>
   )
 }

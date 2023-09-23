@@ -11,7 +11,10 @@ const HeroSection = () => {
         </span>
       </p>
 
-      <div className='flex flex-col items-start justify-center px-9 lg:px-0'>
+      <div
+        data-aos='fade-up'
+        className='flex flex-col items-start justify-center px-9 lg:px-0'
+      >
         <div className='flex flex-col justify-center'>
           <h2 className=' relative text-4xl lg:text-[80px] whitespace-nowrap font-bold'>
             getlinked Tech
@@ -61,7 +64,7 @@ const HeroSection = () => {
           </p>
         </div>
       </div>
-      <div className=''>
+      <div data-aos='zoom-in'>
         <p className='relative hidden lg:block pt-8 whitespace-nowrap text-[36px] w-fit font-bold mb-10'>
           Igniting a Revolution in HR Innovation
           <span className='absolute right-0 -bottom-2'>

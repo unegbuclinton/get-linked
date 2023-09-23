@@ -5,7 +5,7 @@ import Link from 'next/link'
 import React from 'react'
 import MenuItems from '../menuItems'
 
-const NavItems = () => {
+const NavItems = ({ outline }: { outline: boolean }) => {
   const [isVisible, setIsVisible] = React.useState(false)
   const toggleMenu = () => {
     setIsVisible(true)
@@ -19,9 +19,11 @@ const NavItems = () => {
             {text}
           </Link>
         ))}
-        <div className='ml-[121px]'>
-          <Button type='button'>Register</Button>
-        </div>
+        <Link href={'/authPages/register'} className='ml-[121px]'>
+          <Button outline={outline} type='button'>
+            Register
+          </Button>
+        </Link>
       </div>
       <img
         src={'/hamburger.svg'}
