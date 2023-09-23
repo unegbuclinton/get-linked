@@ -1,4 +1,5 @@
 import Button from '@/components/atoms/Button/Index'
+import Link from 'next/link'
 import React from 'react'
 
 const HeroSection = () => {
@@ -50,7 +51,9 @@ const HeroSection = () => {
           </p>
         </div>
         <div className='w-full flex justify-center lg:justify-start mb-16'>
-          <Button type='button'>Register</Button>
+          <Button type='button'>
+            <Link href={'/authPages/register'}>Register</Link>
+          </Button>
         </div>
         <img src='/countdown.svg' alt='' />
       </div>

@@ -16,7 +16,9 @@ const MenuItems = ({ onClose }: { onClose: () => void }) => {
           </Link>
         ))}
         <div className=''>
-          <Button type='button'>Register</Button>
+          <Button type='button'>
+            <Link href={'/authPages/register'}>Register</Link>
+          </Button>
         </div>
       </div>
     </div>

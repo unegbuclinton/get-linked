@@ -15,6 +15,7 @@ import 'aos/dist/aos.css'
 import Aos from 'aos'
 import { useState } from 'react'
 import Preloader from '@/components/preloader'
+import Floating from '@/components/floating-items'
 
 export default function Home() {
   const [delay, setDelay] = useState(true)
@@ -28,54 +29,7 @@ export default function Home() {
   if (delay) return <Preloader />
   return (
     <main className='bg-primary '>
-      <div>
-        <img
-          src='/lens1.svg'
-          className='absolute hidden lg:block left-0 top-0'
-        />
-        <img
-          src='/lens2.svg'
-          className='absolute hidden lg:block left-0 top-[1339px]'
-        />
-        <img
-          src='/lens3.svg'
-          className='absolute hidden lg:block -right-[21px] top-[1610px]'
-        />
-        <img
-          src='/lens4.svg'
-          className='absolute hidden lg:block -left-[145px] top-[2406px]'
-        />
-        <img
-          src='/lens5.svg'
-          className='absolute hidden lg:block -right-[417px] top-[2642px]'
-        />
-        <img
-          src='/lens4.svg'
-          className='absolute hidden lg:block -left-[145px] top-[2406px]'
-        />
-        <img
-          src='/lens3.svg'
-          className='absolute hidden lg:block -right-[417px] top-[2642px]'
-        />
-        <img
-          src='/lens3.svg'
-          className='absolute hidden lg:block -right-[417px] top-[2642px]'
-        />
-        {/* <img src='/lens6.svg' className='absolute -left-[145px] top-[2406px]' />
-        <img
-          src='/lens7.svg'
-          className='absolute -right-[417px] top-[2642px]'
-        /> */}
-        {/* <img src='/lens8.svg' className='absolute -left-[231px] top-[6333px]' />
-        <img
-          src='/lens9.svg'
-          className='absolute -right-[471px] top-[6802px]'
-        /> */}
-        <img
-          src='/lens10.svg'
-          className='absolute hidden lg:block -left-[196px] top-[7376px]'
-        />
-      </div>
+      <Floating />
       <Navbar />
       <HeroSection />
       <BigIdea />
