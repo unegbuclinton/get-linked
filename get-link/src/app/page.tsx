@@ -8,6 +8,7 @@ import PrivacyPolicy from '@/components/molecules/privacyPolicy'
 import Prize from '@/components/molecules/prize'
 import Rules from '@/components/molecules/rules/inde'
 import Sponsor from '@/components/molecules/sponsors'
+import Timeline from '@/components/molecules/timeline'
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
       <Rules />
       <Criteria />
       <FrequentlyAsked />
+      <Timeline />
       <Prize />
       <Sponsor />
       <PrivacyPolicy />
