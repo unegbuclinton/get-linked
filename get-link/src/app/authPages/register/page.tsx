@@ -6,7 +6,7 @@ import { yupResolver } from '@hookform/resolvers/yup'
 import React, { useState, useEffect } from 'react'
 import { Controller, useForm } from 'react-hook-form'
 import { registerSchema } from '@/utils/schema'
-import { categoty, size } from '@/utils/jsonData'
+import { size } from '@/utils/jsonData'
 import { getCategory, registrationData } from '@/utils/apiClient'
 import Modal from '@/components/molecules/modal/Modal'
 import SucessMessage from '@/components/molecules/successMessage'
@@ -153,7 +153,7 @@ const RegisterPage = () => {
                       placeholder='Select your category'
                       className='bg-light-tertiary rounded-[4px] border border-white px-3 py-2 text-sm w-full'
                     >
-                      {categoty.map((option: any) => (
+                      {category.map((option: any) => (
                         <option
                           className='text-black'
                           key={option.value}

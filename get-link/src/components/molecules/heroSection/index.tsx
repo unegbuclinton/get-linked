@@ -61,7 +61,7 @@ const HeroSection = () => {
             <img src='/dash.svg' alt='dash' />
           </span>
         </p>
-        <img src='/hero-img1.svg' alt='hero image' />
+        <img src='/hero.png' alt='hero image' />
       </div>
     </div>
   )
