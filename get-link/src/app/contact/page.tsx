@@ -7,10 +7,11 @@ import React from 'react'
 import { Controller, useForm } from 'react-hook-form'
 import { useRouter } from 'next/navigation'
 import { contactSchema } from '@/utils/schema'
+import { contactForm } from '@/utils/apiClient'
 
 type Inputs = {
   name: string
-  topic: string
+  phone: number
   email: string
   message: string
 }
@@ -27,7 +28,15 @@ const ContactPage = () => {
   const router = useRouter()
 
   const onSubmit = (data: Inputs) => {
-    alert(`${data.name} thank you for reaching out`)
+    const { name, email, phone, message } = data
+    contactForm({
+      body: {
+        email: email,
+        phone_number: phone,
+        first_name: name,
+        message: message,
+      },
+    })
   }
 
   return (
@@ -65,11 +74,11 @@ const ContactPage = () => {
             />
             <InputField
               register={register}
-              id='topic'
-              name='topic'
-              placeholder='Topic'
-              type='topic'
-              error={errors.topic?.message}
+              id='phone'
+              name='phone'
+              placeholder='phone'
+              type='phone'
+              error={errors.phone?.message}
             />
             <InputField
               register={register}

@@ -9,7 +9,7 @@ export const contactSchema = yup.object().shape({
       'Invalid email format'
     ),
   name: yup.string().required('Name is required'),
-  topic: yup.string().required('Lets hear you'),
+  phone: yup.number().required('add number'),
   message: yup.string().required('Message is required'),
 })
 
@@ -24,7 +24,6 @@ export const registerSchema = yup.object().shape({
     ),
   name: yup.string().required('Name is required'),
   topic: yup.string().required('Lets hear you'),
-  message: yup.string().required('Message is required'),
   category: yup.string().required('choose a category'),
   size: yup.string().required('choose a size'),
   phone: yup.number().required('Phone number is required'),

@@ -3,20 +3,29 @@ import Button from '@/components/atoms/Button/Index'
 import InputField from '@/components/atoms/input'
 import NavItems from '@/components/molecules/navItems'
 import { yupResolver } from '@hookform/resolvers/yup'
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { Controller, useForm } from 'react-hook-form'
 import { registerSchema } from '@/utils/schema'
 import { categoty, size } from '@/utils/jsonData'
+import { getCategory, registrationData } from '@/utils/apiClient'
+import Modal from '@/components/molecules/modal/Modal'
+import SucessMessage from '@/components/molecules/successMessage'
 
 type Inputs = {
   name: string
   topic: string
   email: string
   category: string
-  message: string
   size: string
   phone: number
+  termsAndConditions?: boolean
 }
+
+interface ResponseItem {
+  id: number
+  name: string
+}
+
 const RegisterPage = () => {
   const {
     register,
@@ -27,18 +36,49 @@ const RegisterPage = () => {
     mode: 'onChange',
     resolver: yupResolver(registerSchema),
   })
-  const [isChecked, setIsChecked] = useState(false)
 
-  const handleCheckboxChange = () => {
-    setIsChecked(!isChecked)
+  const [category, setCategory] = useState([])
+  const [modal, setModal] = useState(true)
+
+  const onSubmit = async (data: Inputs) => {
+    const { name, category, email, phone, size, topic, termsAndConditions } =
+      data
+
+    try {
+      const res = await registrationData({
+        body: {
+          email: email,
+          phone_number: phone,
+          team_name: name,
+          group_size: size,
+          project_topic: topic,
+          category: category,
+          privacy_poclicy_accepted: termsAndConditions,
+        },
+      })
+      if (res) {
+        setModal(true)
+      }
+    } catch (error) {}
   }
 
-  const onSubmit = (data: Inputs) => {
-    alert(`${data.name} thank you for reaching out`)
-  }
+  useEffect(() => {
+    const getcategory = async () => {
+      const categories = await getCategory()
+      const mappedArray = categories.map((item: ResponseItem) => ({
+        value: item.name,
+        label: item.name,
+      }))
+      setCategory(mappedArray)
+    }
+    getcategory()
+  }, [])
 
   return (
     <div className=' bg-primary lg:p-12'>
+      <Modal isShown={modal} hide={() => setModal(false)}>
+        <SucessMessage />
+      </Modal>
       <nav className='hidden md:flex bg-transparent items-center justify-between px-14 pb-6 pt-9 lg:pt-[63px] lg:mb-20'>
         <img
           src={'/logo.svg'}
@@ -98,8 +138,8 @@ const RegisterPage = () => {
               placeholder='What is your group project topic'
               error={errors.email?.message}
             />
-            <div className='flex w-full text-white gap-4'>
-              <div className=''>
+            <div className='flex text-white gap-4'>
+              <div className='lg:w-full w-1/2'>
                 <label className='font-semibold text-sm text-gray-600 pb-1 block'>
                   Category
                 </label>
@@ -111,11 +151,14 @@ const RegisterPage = () => {
                     <select
                       {...field}
                       placeholder='Select your category'
-                      className='bg-light-tertiary rounded-[4px] border border-white px-3 py-2 text-sm'
+                      className='bg-light-tertiary rounded-[4px] border border-white px-3 py-2 text-sm w-full'
                     >
-                      <option value=''>Select One</option>
-                      {categoty.map((option) => (
-                        <option key={option.value} value={option.value}>
+                      {categoty.map((option: any) => (
+                        <option
+                          className='text-black'
+                          key={option.value}
+                          value={option.value}
+                        >
                           {option.label}
                         </option>
                       ))}
@@ -123,7 +166,7 @@ const RegisterPage = () => {
                   )}
                 />
               </div>
-              <div>
+              <div className='lg:w-full w-1/3'>
                 <label className='font-semibold text-sm text-gray-600 pb-1 block'>
                   Group size
                 </label>
@@ -134,11 +177,14 @@ const RegisterPage = () => {
                   render={({ field }) => (
                     <select
                       {...field}
-                      className='bg-light-tertiary rounded-[4px] border border-white px-3 py-2'
+                      className='bg-light-tertiary rounded-[4px] border border-white px-3 py-2 text-sm w-full'
                     >
-                      <option value=''>Select One</option>
                       {size.map((option) => (
-                        <option key={option.value} value={option.value}>
+                        <option
+                          className='text-black'
+                          key={option.value}
+                          value={option.value}
+                        >
                           {option.label}
                         </option>
                       ))}
@@ -147,16 +193,24 @@ const RegisterPage = () => {
                 />
               </div>
             </div>
-            <p className='text-center lg:text-left text-tertiary my-3 text-[9px] lg:text-xs'>
+
+            <p className='text-center text-white lg:text-left text-tertiary my-3 text-[9px] lg:text-xs'>
               Please review your registration details before submitting
             </p>
 
-            <div className='text-center lg:text-left'>
+            <div className='text-center text-white lg:text-left'>
               <label>
-                <input
-                  type='checkbox'
-                  checked={isChecked}
-                  onChange={handleCheckboxChange}
+                <Controller
+                  name='termsAndConditions'
+                  control={control}
+                  defaultValue={false}
+                  render={({ field }) => (
+                    <input
+                      type='checkbox'
+                      {...field}
+                      value={field.value ? 'true' : 'false'} // Convert boolean value to string
+                    />
+                  )}
                 />{' '}
                 I agree to the terms and conditions
               </label>
