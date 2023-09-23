@@ -30,6 +30,8 @@ module.exports = {
           'linear-gradient(270deg, #903AFF 0%, #D434FE 56.42%, #FF26B9 99.99%, #FE34B9 100%)',
           'circular-gradient': 'linear-gradient(270deg, #903AFF 0%, #D434FE 100%)',
 
+        'hover-gradient':
+          'linear-gradient(270deg, #FE34B9 0%, #FF26B9 43.58%, #D434FE 86.61%, #903AFF 100%);',
       },
     },
   },

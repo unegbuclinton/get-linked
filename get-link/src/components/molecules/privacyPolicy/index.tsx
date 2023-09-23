@@ -11,20 +11,20 @@ const PrivacyPolicy = () => {
     },
   ]
   return (
-    <div className='flex items-center justify-center py-8 mt-16'>
-      <div className='max-w-primary-width text-white pt-10'>
-        <h3 className='font-bold text-4xl mb-4 mr-28'>
+    <div className='flex flex-col gap-12 lg:gap-0 lg:flex-row px-8 lg:px-12 items-center justify-center py-8 mt-16'>
+      <div className='lg:max-w-primary-width text-white pt-10 text-center lg:text-left'>
+        <h3 className='font-bold text-xl lg:text-4xl lg:mb-4 lg:mr-28'>
           Privacy Policy and <br /> <span className='text-tertiary'>Terms</span>
         </h3>
-        <p className='text-sm text-white/75'>
+        <p className='text-xs lg:text-sm mb-8 lg:mb-0 text-white/75'>
           Last updated on September 12, 2023
         </p>
         <p className='text-sm mb-14'>
           Below are our privacy & policy, which outline a lot of goodies. it’s
           our aim to always take of our participant
         </p>
-        <div className='px-[72px] py-14 text-sm border border-tertiary bg-light-tertiary'>
-          <p>
+        <div className='px-3 lg:px-[72px] py-14 text-sm border border-tertiary bg-light-tertiary'>
+          <p className='text-center lg:text-left mb-4'>
             At getlinked tech Hackathon 1.0, we value your privacy and are
             committed to protecting your personal information. This Privacy
             Policy outlines how we collect, use, disclose, and safeguard your
@@ -41,19 +41,24 @@ const PrivacyPolicy = () => {
           <ul>
             {policy?.map(({ text }, idx) => (
               <li key={idx} className='flex gap-4 items-start my-5'>
-                <span>
+                <p>
                   <img src='/tick.svg' alt='tick' />
-                </span>
+                </p>
                 {text}
               </li>
             ))}
           </ul>
-          <div className='flex justify-center'>
+          <div className='hidden lg:flex justify-center'>
             <Button type='button'>Read more</Button>
+          </div>
+          <div className='flex lg:hidden justify-center'>
+            <Button small type='button'>
+              Read more
+            </Button>
           </div>
         </div>
       </div>
-      <img src='/security.svg' alt='security' className='ml-[50px]' />
+      <img src='/security.svg' alt='security' className='lg:ml-[50px]' />
     </div>
   )
 }

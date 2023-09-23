@@ -1,18 +1,20 @@
+'use client'
 import Button from '@/components/atoms/Button/Index'
+import { navMenuItems } from '@/utils/jsonData'
 import Link from 'next/link'
 import React from 'react'
+import MenuItems from '../menuItems'
 
 const NavItems = () => {
-  const items: Array<{ text: string; link: string }> = [
-    { text: 'Timeline', link: '' },
-    { text: 'Overview', link: '' },
-    { text: 'FAQs', link: '' },
-    { text: 'Contact', link: '' },
-  ]
+  const [isVisible, setIsVisible] = React.useState(false)
+  const toggleMenu = () => {
+    setIsVisible(true)
+  }
+  console.log(isVisible)
   return (
     <div>
-      <div className='flex items-center text-white gap-14'>
-        {items?.map(({ text, link }, idx) => (
+      <div className='hidden lg:flex items-center text-white gap-14'>
+        {navMenuItems?.map(({ text, link }, idx) => (
           <Link className='text-base link-underline' key={idx} href={link}>
             {text}
           </Link>
@@ -20,6 +22,19 @@ const NavItems = () => {
         <div className='ml-[121px]'>
           <Button type='button'>Register</Button>
         </div>
+      </div>
+      <img
+        src={'/hamburger.svg'}
+        alt='logo'
+        className='block lg:hidden'
+        onClick={toggleMenu}
+      />
+      <div
+        className={`w-full md:w-[50%] fixed z-10 top-0 right-0 bottom-0 transition-transform duration-500 ${
+          isVisible ? 'translate-x-0' : 'translate-x-full'
+        }`}
+      >
+        <MenuItems onClose={() => setIsVisible(false)} />
       </div>
     </div>
   )

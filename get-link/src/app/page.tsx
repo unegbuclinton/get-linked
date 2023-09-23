@@ -6,7 +6,7 @@ import HeroSection from '@/components/molecules/heroSection'
 import Navbar from '@/components/molecules/navbar'
 import PrivacyPolicy from '@/components/molecules/privacyPolicy'
 import Prize from '@/components/molecules/prize'
-import Rules from '@/components/molecules/rules/inde'
+import Rules from '@/components/molecules/rules'
 import Sponsor from '@/components/molecules/sponsors'
 import Timeline from '@/components/molecules/timeline'
 

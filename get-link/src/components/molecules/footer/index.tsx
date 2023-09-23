@@ -9,9 +9,9 @@ const Footer = () => {
     },
   ]
   return (
-    <footer className='text-xs text-white bg-[#110B27]'>
-      <div className='flex justify-center pt-20 pb-14'>
-        <div className='max-w-[410px] mr-[190px]'>
+    <footer className='text-xs text-white bg-[#110B27] px-12 lg:px-0'>
+      <div className='flex flex-col md:flex-row justify-center pt-20 lg:pb-14'>
+        <div className='lg:max-w-[410px] lg:mr-[190px]'>
           <img src='/footer-logo.svg' alt='' className='mb-2' />
           <p>
             Getlinked Tech Hackathon is a technology innovation program
@@ -19,14 +19,14 @@ const Footer = () => {
             young and talented individuals in the field of technology
           </p>
 
-          <p className='flex mt-14'>
+          <p className='flex mt-14 mb-9 lg:mb-0'>
             <span>Term of use</span>
-            <span className='text-tertiary'>|</span>
+            <span className='text-tertiary'> |{''} </span>
             <span>Privacy policy</span>
           </p>
         </div>
 
-        <div className='mr-[160px]'>
+        <div className='lg:mr-[160px]'>
           <p className='text-tertiary mb-1.5'>Useful links</p>
           <ul>
             {['Overview', 'Timeline', 'FAQs', 'Register'].map((x, idx) => (
@@ -52,7 +52,7 @@ const Footer = () => {
           </p>
         </div>
         <div>
-          <p className='text-tertiary mb-5'>Contact Us</p>
+          <p className='text-tertiary mb-5 mt-14 lg:mt-0'>Contact Us</p>
           <ul>
             {contact?.map(({ text, icon }, idx) => (
               <li

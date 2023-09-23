@@ -55,3 +55,10 @@ export const criteriaInfo: Array<{ preamble: string; text: string }> = [
     text: 'Judges will Ensure that the team adhered to the rules and guidelines of the hackathon, including deadlines, use of specific technologies or APIs, and any other competition-specific requirements.',
   },
 ]
+
+export const navMenuItems: Array<{ text: string; link: string }> = [
+  { text: 'Timeline', link: '' },
+  { text: 'Overview', link: '' },
+  { text: 'FAQs', link: '' },
+  { text: 'Contact', link: '' },
+]
