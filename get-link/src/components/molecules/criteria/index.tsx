@@ -6,7 +6,7 @@ const Criteria = () => {
   return (
     <div
       data-aos='fade-down-right'
-      className='flex flex-col lg:flex-row items-center mt-20 pb-20 px-11 lg:px-0 border-b border-white/20 text-white'
+      className='flex flex-col lg:flex-row justify-center items-center mt-20 pb-20 px-11 lg:px-0 border-b border-white/20 text-white'
     >
       <img src='/judging.svg' alt='' />
       <div className='max-w-primary-width lg:ml-12 text-center lg:text-left'>
