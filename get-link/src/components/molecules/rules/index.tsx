@@ -4,7 +4,7 @@ const Rules = () => {
   return (
     <div
       data-aos='fade-right'
-      className='flex flex-col-reverse lg:flex-row justify-center items-center border border-white/20 px-11 lg:px-0 pb-12 lg:pb-0'
+      className='flex flex-col-reverse lg:flex-row justify-center items-center border-b border-white/10 px-11 lg:px-0 pb-12 lg:pb-0'
     >
       <div
         data-aos='fade-down'

@@ -39,7 +39,7 @@ export default function Home() {
         />
         <img
           src='/lens3.svg'
-          className='absolute hidden lg:block right-[21px] top-[1610px]'
+          className='absolute hidden lg:block -right-[21px] top-[1610px]'
         />
         <img
           src='/lens4.svg'
@@ -54,11 +54,11 @@ export default function Home() {
           className='absolute hidden lg:block -left-[145px] top-[2406px]'
         />
         <img
-          src='/lens5.svg'
+          src='/lens3.svg'
           className='absolute hidden lg:block -right-[417px] top-[2642px]'
         />
         <img
-          src='/lens5.svg'
+          src='/lens3.svg'
           className='absolute hidden lg:block -right-[417px] top-[2642px]'
         />
         {/* <img src='/lens6.svg' className='absolute -left-[145px] top-[2406px]' />

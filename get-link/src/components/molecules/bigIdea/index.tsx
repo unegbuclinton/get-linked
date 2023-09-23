@@ -2,7 +2,7 @@ import React from 'react'
 
 const BigIdea = () => {
   return (
-    <div className='flex flex-col lg:flex-row justify-center text-white items-center pt-8 lg:pt-16 pb-20 border border-white/20 px-11 lg:px-0'>
+    <div className='flex flex-col lg:flex-row justify-center text-white items-center pt-8 lg:pt-16 pb-20 border-b border-t border-white/10 px-11 lg:px-0'>
       <img src='/bigIdea.svg' alt='img-idea' data-aos='fade-left' />
       <div
         data-aos='fade-right'
