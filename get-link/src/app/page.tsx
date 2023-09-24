@@ -23,7 +23,7 @@ export default function Home() {
     Aos.init({ duration: 1000 })
     const timer = setTimeout(() => {
       setDelay(false)
-    }, 5000)
+    }, 2000)
     return () => clearTimeout(timer)
   }, [])
   if (delay) return <Preloader />

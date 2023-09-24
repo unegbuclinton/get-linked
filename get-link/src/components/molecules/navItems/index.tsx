@@ -28,7 +28,8 @@ const NavItems = ({ outline }: { outline: boolean }) => {
               smooth={true}
               offset={offset}
               duration={500}
-              className='text-base link-underline'
+              activeClass='activeLink'
+              className='text-base'
             >
               {text}
             </ScrollLink>
