@@ -24,7 +24,7 @@ const MenuItems = ({ onClose }: { onClose: () => void }) => {
               smooth={true}
               offset={offset}
               duration={500}
-              className='text-base link-underline'
+              className='text-base '
             >
               {text}
             </ScrollLink>
