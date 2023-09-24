@@ -49,7 +49,7 @@ const InputField: React.FC<InputProps> = ({
           disabled={disabled}
           onKeyDown={numberKeyPress}
           placeholder={placeholder}
-          className={`${styles} border border-white rounded-[4px] bg-light-tertiary outline-none focus:border-primary duration-200 px-6 py-2 mt-1 text-base w-full`}
+          className={`${styles} border border-white rounded-[4px] text-white bg-light-tertiary outline-none focus:border-primary duration-200 px-6 py-2 mt-1 text-base w-full`}
         />
         <p className='text-sm text-[red] mt-2'>{error}</p>
       </div>

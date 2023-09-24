@@ -2,6 +2,7 @@
 import Button from '@/components/atoms/Button/Index'
 import { navMenuItems } from '@/utils/jsonData'
 import Link from 'next/link'
+import { Link as ScrollLink } from 'react-scroll'
 import React from 'react'
 import MenuItems from '../menuItems'
 
@@ -14,11 +15,26 @@ const NavItems = ({ outline }: { outline: boolean }) => {
   return (
     <div>
       <div className='hidden lg:flex items-center text-white gap-14'>
-        {navMenuItems?.map(({ text, link }, idx) => (
-          <Link className='text-base link-underline' key={idx} href={link}>
-            {text}
-          </Link>
-        ))}
+        {navMenuItems?.map(({ text, link, offset, to }, idx) =>
+          link.length > 1 ? (
+            <Link key={idx} href={link} className='text-base link-underline'>
+              {text}
+            </Link>
+          ) : (
+            <ScrollLink
+              key={idx}
+              to={to}
+              spy={true}
+              smooth={true}
+              offset={offset}
+              duration={500}
+              className='text-base link-underline'
+            >
+              {text}
+            </ScrollLink>
+          )
+        )}
+
         <Link href={'/authPages/register'} className='ml-[121px]'>
           <Button outline={outline} type='button'>
             Register

@@ -56,11 +56,16 @@ export const criteriaInfo: Array<{ preamble: string; text: string }> = [
   },
 ]
 
-export const navMenuItems: Array<{ text: string; link: string }> = [
-  { text: 'Timeline', link: '' },
-  { text: 'Overview', link: '' },
-  { text: 'FAQs', link: '' },
-  { text: 'Contact', link: '/contact' },
+export const navMenuItems: Array<{
+  text: string
+  to: string
+  offset?: number
+  link: string
+}> = [
+  { text: 'Timeline', offset: -100, to: 'timeline', link: '' },
+  { text: 'Overview', offset: -100, to: 'overview', link: '' },
+  { text: 'FAQs', offset: -100, to: 'faq', link: '' },
+  { text: 'Contact', link: '/contact', to: '' },
 ]
 
 export const categoty: Array<{ value: string; label: string }> = [

@@ -1,6 +1,7 @@
 import Button from '@/components/atoms/Button/Index'
 import { navMenuItems } from '@/utils/jsonData'
 import Link from 'next/link'
+import { Link as ScrollLink } from 'react-scroll'
 import React from 'react'
 
 const MenuItems = ({ onClose }: { onClose: () => void }) => {
@@ -10,11 +11,25 @@ const MenuItems = ({ onClose }: { onClose: () => void }) => {
         <div onClick={onClose} className='flex justify-end w-full'>
           <img src='/cancel.svg' alt='' />
         </div>
-        {navMenuItems?.map(({ text, link }, idx) => (
-          <Link className='text-lg' key={idx} href={link}>
-            {text}
-          </Link>
-        ))}
+        {navMenuItems?.map(({ text, link, offset, to }, idx) =>
+          link.length > 1 ? (
+            <Link key={idx} href={link} className='text-base link-underline'>
+              {text}
+            </Link>
+          ) : (
+            <ScrollLink
+              key={idx}
+              to={to}
+              spy={true}
+              smooth={true}
+              offset={offset}
+              duration={500}
+              className='text-base link-underline'
+            >
+              {text}
+            </ScrollLink>
+          )
+        )}
         <div className=''>
           <Button type='button'>
             <Link href={'/authPages/register'}>Register</Link>

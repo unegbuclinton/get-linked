@@ -8,10 +8,11 @@ import { Controller, useForm } from 'react-hook-form'
 import { useRouter } from 'next/navigation'
 import { contactSchema } from '@/utils/schema'
 import { contactForm } from '@/utils/apiClient'
+import Link from 'next/link'
 
 type Inputs = {
   name: string
-  phone: number
+  phone: string
   email: string
   message: string
 }
@@ -42,13 +43,15 @@ const ContactPage = () => {
   return (
     <div className=' bg-primary lg:p-12'>
       <nav className='hidden md:flex bg-transparent items-center justify-between px-14 pb-6 pt-9 lg:pt-[63px] lg:mb-20'>
-        <img
-          src={'/logo.svg'}
-          width={171}
-          height={44}
-          alt='logo'
-          className='hidden lg:block'
-        />
+        <Link href={'/'}>
+          <img
+            src={'/logo.svg'}
+            width={171}
+            height={44}
+            alt='logo'
+            className='hidden lg:block'
+          />
+        </Link>
         <img src={'/logo-mobile.svg'} alt='logo' className='block lg:hidden' />
         <NavItems outline={false} />
       </nav>
@@ -76,7 +79,7 @@ const ContactPage = () => {
               register={register}
               id='phone'
               name='phone'
-              placeholder='phone'
+              placeholder='Phone'
               type='phone'
               error={errors.phone?.message}
             />

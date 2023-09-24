@@ -9,7 +9,15 @@ export const contactSchema = yup.object().shape({
       'Invalid email format'
     ),
   name: yup.string().required('Name is required'),
-  phone: yup.number().required('add number'),
+  phone: yup
+    .string()
+    .required('Please add a number')
+    .transform((value) => {
+      const parsedValue = parseFloat(value)
+      return isNaN(parsedValue) ? undefined : parsedValue
+    })
+    .typeError('Phone must be a number'),
+
   message: yup.string().required('Message is required'),
 })
 

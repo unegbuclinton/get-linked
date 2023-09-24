@@ -17,7 +17,7 @@ const Accordion: React.FC<accordionProp> = ({ answer, question }) => {
   }
 
   return (
-    <div className='border-b border-tertiary pb-3 w-fit mb-6'>
+    <div id='faq' className='border-b border-tertiary pb-3 w-fit mb-6'>
       <div
         onClick={toggleIcon}
         className='flex items-center justify-between mb-5 cursor-pointer'
